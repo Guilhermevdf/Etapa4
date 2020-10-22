@@ -103,14 +103,14 @@ public class Automovel {
 				System.out.println("O carro ja esta ligado!");
 				this.estado = true;
 			}
-		} else {
+		} else if(op.equalsIgnoreCase("desligar")) {
 			if (this.velocidade_atual == 0) {
 				Tratar.dormirSegundos(400L, "Desligando veiculo");
 				System.out.println("Vrum... O Carro esta desligado");
 				this.estado = false;
 			} else {
 				System.out.println("O carro ainda está em movimento!");
-				this.estado = false;
+				this.estado = true;
 			}
 		}
 	}
